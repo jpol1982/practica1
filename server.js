@@ -11,12 +11,12 @@ app.get('/', (req, res) => {
 
 let items= ['manzana','papaya','limon']
 
-//endpoint 1 : GET /items -> lista todas las frutas
+//endpoint 1 : GET /items -> lista todas las frutas del listado
 app.get('/items', (req, res) => {
   res.status(200).json(items);
 })
 
-//endpoint 2 : POST /items-> agrega una fruta
+//endpoint 2 : POST /items-> agrega una fruta al listado
 app.post('/items', (req, res) => {
   const fruta = req.body;
   
@@ -32,7 +32,7 @@ app.post('/items', (req, res) => {
 })
 
 
-//endpoint 3 : PUT /items/:id -> actualiza la fruta
+//endpoint 3 : PUT /items/:id -> actualiza la fruta del listado
 app.put('/items/:index', (req, res) =>{
   console.log(req.params['index']);
   let posicion = req.params['index'];
@@ -52,7 +52,7 @@ app.put('/items/:index', (req, res) =>{
 });
 
 
-//endpoint 4 : DELETE /items/:id -> eliminar la fruta
+//endpoint 4 : DELETE /items/:id -> eliminar la fruta del listado
 app.delete('/items/:index', (req, res) =>{
     console.log(req.params['index']);
    
