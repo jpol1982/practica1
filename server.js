@@ -42,7 +42,7 @@ app.put('/items/:index', (req, res) =>{
   if((items.length-1)>=posicion)
   {
     items.splice(posicion, 1,fruta.item)
-    res.status(200).send(`Se quito de la posicion: ${posicion} \n nueva lista: ${JSON.stringify(items)}`);
+    res.status(200).send(`Se modifico de la posicion: ${posicion} \n nueva lista: ${JSON.stringify(items)}`);
     console.log(items);
   }
   else
